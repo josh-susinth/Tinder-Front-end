@@ -1,13 +1,198 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;700&display=swap');
+.html, body{
+    margin:0;
+    padding:0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    font-family: 'Readex Pro', sans-serif;
+}
+
+.primary-button{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, #fe3072, #ff5940);
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+}
+
+.primary-button:hover{
+    background: linear-gradient(45deg, #ff5940, #fe3072);
+}
+
+body{
+    text-align: center;
+}
+
+.home{
+    margin-top: 10vh;
+}
+
+.home-title{
+    font-size: 50px;
+    color: white;
+}
+
+/*--------nav bar ---------*/
+nav{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+nav .logo-container{
+    width: 170px;
+    margin: 5px;
+}
+
+nav .logo{
+    width: 100%;
+    height: 30px;
+}
+
+nav .nav-button{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    background: linear-gradient(45deg, #fe3072, #ff5940);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    margin: 5px;
+}
+
+/*.nav-button:disabled{
+    background: black;
+}
+*/
+
+/*-------- home ---------*/
+.overLay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: url('images/anime.png');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+
+/*-------- AuthModal ---------*/
+.authModal-container .authModal-close-btn{
+    float: right;
+    background-color: #fff;
+    border: none;
+}
+
+.authModal-container{
+    position: relative;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height:100%;
+    background-color: #fff;
+    max-width:300px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.auth-modal-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.in-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.in-form div{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.in-form label{
+    width: 100px;
+    justify-items: left;
+}
+
+/*-------- onboarding ---------*/
+.onBoarding form{
+    display: flex;
+    justify-content: center;
+}
+
+.onBoarding form label{
+    margin: 10px 5px;
+    text-align: left;
+}
+
+.show-gender-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.onBoarding form section .show-gender-container input{
+    margin: 10px;
+}
+
+.onBoarding form section{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 35%;
+}
+
+.onBoarding form input{
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: solid 2px lightgrey;
+    border-radius: 10px;
+}
+
+.onBoarding form input::-webkit-inner-spin-button,
+.onBoarding form input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.onBoarding form .multiple-line-input{
+    display: flex;
+    flex-direction: row;
+}
+
+.onBoarding form .multiple-line-input input{
+    margin-right: 10px;
+}
+
+.onBoarding form .multiple-line-input label{
+    padding: 10px;
+    border: solid 2px rgb(144, 144, 144);
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+.onBoarding form input[type='radio']{
+    display: none;
+}
+
+.onBoarding form input[type='number']{
+    width: 10%;
+}
+
+.onBoarding form input[type="radio"]:checked+label{
+    background-color: grey;
+}
+
+.onBoarding form input[type="submit"]:active{
+    background: linear-gradient(45deg, #ff5940, #fe3072);
+}
+
+.onBoarding form .photo-container img{
+    width: 100%;
 }
